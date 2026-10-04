@@ -9,7 +9,22 @@ kelompok ke-3 (baris ke-3) merupakan angka-angka kelipatan 3
 Contoh jika arr inputan adalah [45, 20, 21, 2, 7] maka output: [ [ 20, 2 ], [ 7 ], [ 45, 21 ] ]
 */
 function mengelompokkanAngka(arr) {
-  // you can only write your code here!
+  let library = [[], [], []];
+
+  for (let i = 0; i < arr.length; i++) {
+    let librarySementara = arr[i];
+
+    if (librarySementara % 3 === 0) {
+      library[2].push(librarySementara);
+    } else if (librarySementara % 2 === 0) {
+      library[0].push(librarySementara);
+    } else {
+      library[1].push(librarySementara);
+    }
+  }
+
+  return library;
+
 }
 
 // TEST CASES
